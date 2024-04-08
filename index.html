@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange Application</title>
+    <link rel="icon" type="image/x-icon" href="application-icon.ico">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style sheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main class="vh-100 w-100 overflow-hidden">
+        <!-- start header -->
+        <div class="header bg-black">
+            <div class="container h-100 d-flex justify-content-between align-items-center">
+                <img class="header-logo-img" src="images/logo.png" alt="" id="logo">
+                <h1 class="header-title text-warning mr-3">Currency Exchange</h1>
+            </div>
+        </div>
+        <!-- end header -->
+        <!-- start app -->
+        <div class="app bg-warning w-100 d-flex flex-column align-items-center justify-content-baseline p-4 ">
+            <div class="app-body bg-dark p-2 rounded-4">
+                <h3 class="app-body-title text-white p-2">Amount</h3>
+                <!-- start exchange input field -->
+                <div class="exchange-field mt-2 container px-5 d-flex justify-content-between align-items-center">
+                    <input type="text" class="w-100 " id="inp-exchange" placeholder="enter money amount ...">
+                    <button id="icon-btn-exchange" class="btn"><i
+                            class="fa-solid fa-arrow-right-arrow-left text-primary fs-4 "></i></button>
+                </div>
+                <!-- end exchange input field  -->
+                <div class="exchange-selections d-flex flex-column gap-4 my-5 align-content-center">
+                    <!-- dropdown exchange from -->
+                    <div class="dropdown w-100" id="current-currencies">
+                        <button
+                            class="btn btn-secondary dropdown-toggle w-100 d-flex justify-content-between bg-black text-white fw-bold fs-5 px-4 align-items-center rounded-0"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="dropdown-toggle-txt"><i class="fa-solid fa-wallet text-primary fw-bold px-2"></i>
+                                Choose
+                                Currency
+                                Convert From</span>
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <ul class="dropdown-menu w-100 mt-2"></ul>
+                    </div>
+                    <!-- dropdown exchange to -->
+                    <div class="dropdown w-100" id="oposite-currencies">
+                        <button
+                            class="btn btn-secondary dropdown-toggle w-100 d-flex justify-content-between bg-black text-white fw-bold fs-5 px-4 align-items-center rounded-0"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="dropdown-toggle-txt"><i
+                                    class="fa-solid fa-money-bill-transfer text-success fw-bold px-1"></i> Choose
+                                Currency
+                                Convert To</span>
+                            <span class="arrow-icon"></span>
+                        </button>
+                        <ul class="dropdown-menu w-100 mt-2"></ul>
+                    </div>
+                    <!-- button converter -->
+                    <button class="btn text-white fw-bold fs-5 rounded-5 mt-3 " id="convert-btn">Converter</button>
+                    <!-- message statemnt of exchange values -->
+                    <h1 class="text-white text-center mt-2" id="converted-statement">1 AED = 1 AED</h1>
+                    <!-- message in bad cases -->
+                    <div id="err-message-field" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end app -->
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

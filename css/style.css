@@ -1,0 +1,213 @@
+/* Import Google Basic Font */
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+/* start header */
+.header {
+    height: 15vh;
+}
+
+.header-logo-img {
+    width: 5em;
+}
+
+.header-title {
+    margin-right: 2.5em;
+}
+
+/* end header */
+
+
+/* start app */
+.app {
+    height: 100%;
+}
+
+.app-body {
+    width: 80%;
+    box-shadow: 2px 2px 16px 6px #402222;
+}
+
+.app-body-title {
+    font-family: "Basic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 1em 1em 0;
+    cursor: pointer;
+}
+
+/* exchange input field */
+
+.app-body .exchange-field {
+    position: relative;
+}
+
+.app-body .exchange-field #inp-exchange {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #1b66bb;
+    border-radius: 0.3em;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #fff;
+    padding: 6px 0;
+    padding-left: 1em;
+}
+
+.exchange-field #inp-exchange::placeholder {
+    font-size: 0.8em;
+}
+
+.exchange-field #icon-btn-exchange {
+    position: absolute;
+    right: 6%;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.exchange-field #icon-btn-exchange:hover i {
+    color: #07992e !important;
+}
+
+/* end exchange input field */
+
+/* dropdowns exchange */
+.exchange-selections {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.exchange-selections .dropdown-menu {
+    height: 15em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #3b3b3b !important;
+    border: 1px solid #fff;
+    padding: 0;
+    border: 1px solid #000 !important;
+}
+
+#dropdown-toggle-txt {
+    font-size: 0.8em;
+}
+
+.exchange-selections .dropdown-toggle::after {
+    content: none !important;
+}
+
+.exchange-selections .dropdown-toggle span.arrow-icon {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.exchange-selections .dropdown-menu .dropdown-item:hover {
+    background-color: #53575b;
+}
+
+button#convert-btn {
+    cursor: pointer;
+    background-color: #117215;
+}
+
+button#convert-btn:focus {
+    background-color: #0d5a10;
+}
+
+/* end dropdowns exchange */
+
+/* end app */
+
+
+/* [Mobil] Media Query */
+@media (max-width: 767px) {
+    .app-body {
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .header-title {
+        margin-top: 0.4em;
+    }
+
+    .header-logo-img {
+        width: 3.7em;
+        margin-left: 1em;
+    }
+
+    .exchange-selections {
+        gap: 1.8em 0em !important;
+    }
+
+    .exchange-field {
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+    }
+
+    .exchange-field #inp-exchange::placeholder {
+        font-size: 0.7em;
+    }
+
+    .exchange-field #icon-btn-exchange {
+        font-size: 1.3em;
+    }
+
+    .exchange-selections .dropdown-toggle span.arrow-icon {
+        border-top: 0.25em solid;
+        border-right: 0.25em solid transparent;
+        border-left: 0.25em solid transparent;
+    }
+
+    #dropdown-toggle-txt {
+        font-size: 0.62em;
+    }
+
+    button#convert-btn {
+        font-size: 1em !important;
+        padding: 0.2em !important;
+        margin-top: 1em;
+    }
+
+    button#icon-btn-exchange {
+        right: 10% !important;
+    }
+
+    button#icon-btn-exchange i {
+        font-size: 0.9em !important;
+    }
+
+    #err-message-field h5 {
+        font-size: 0.9em !important;
+    }
+
+    #now-choosed-item {
+        font-size: 1em;
+    }
+}
+/* end [Mobil] Media Query */
+
+
+/* [Tablet] Media Query */
+@media screen and (min-width: 768px) and (max-width:991px) {
+    .app-body {
+        width: 100%;
+        margin-top: 8em;
+    }
+
+    .header-title {
+        font-size: 2.5em;
+    }
+
+    .exchange-field #icon-btn-exchange {
+        right: 7%;
+    }
+}
+
+/* end [Tablet] Media Query */
